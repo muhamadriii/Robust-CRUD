@@ -17,15 +17,18 @@
                         <table class="table table-hover text-nowrap">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
+                                    <th>No</th>
                                     <th>Name</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @php
+                                    $n=1;
+                                @endphp
                                 @foreach ($data as $datum)
                                     <tr>
-                                        <td>{{ $datum->id }}</td>
+                                        <td>{{$n++}}</td>
                                         <td>{{ $datum->name }}</td>
                                         <td>
                                             <div class="btn-group">

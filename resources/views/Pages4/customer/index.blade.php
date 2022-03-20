@@ -17,7 +17,7 @@
                         <table class="table table-hover text-nowrap">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
+                                    <th>No</th>
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Phone</th>
@@ -26,9 +26,12 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @php
+                                    $no=1;
+                                @endphp
                                 @foreach ($data as $datum)
                                     <tr>
-                                        <td>{{ $datum->id }}</td>
+                                        <td>{{ $no++}}</td>
                                         <td>{{ $datum->name }}</td>
                                         <td>{{ $datum->email }}</td>
                                         <td>{{ $datum->phone }}</td>

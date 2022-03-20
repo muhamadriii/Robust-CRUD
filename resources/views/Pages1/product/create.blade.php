@@ -46,36 +46,7 @@
                                 @endforeach
                             </select>
                         </div>
-                        {{-- <div class="form-group">
-                            <label>Price :</label>
-                            <select class="from-control" name="price" id="">
-                                @foreach($prices as $price)
-                                    <option value="{{ $price->id }}">
-                                        {{ $price->name }}
-                                    </option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Stock :</label>
-                            <select class="from-control" name="stock" id="">
-                                @foreach($stocks as $stock)
-                                    <option value="{{ $stock->id }}">
-                                        {{ $stock->name }}
-                                    </option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Image :</label>
-                            <select class="from-control" name="image" id="">
-                                @foreach($images as $image)
-                                    <option value="{{ $image->id }}">
-                                        {{ $image->name }}
-                                    </option>
-                                @endforeach
-                            </select>
-                        </div> --}}
+                       
                         <div class="form-group">
                             <label>Price :</label>
                             <input type="text" name="price" class="form-control" placeholder="Price">
@@ -86,7 +57,7 @@
                         </div>
                         <div class="form-group">
                             <label>image :</label>
-                            <input type="text" name="image" class="form-control" placeholder="Image">
+                            <input type="file" name="image" class="form-control" placeholder="Image">
                         </div>
                     </div>
                     <div class="card-footer">

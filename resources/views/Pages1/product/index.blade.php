@@ -29,14 +29,17 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @php
+                                $n=1;
+                            @endphp
                             @foreach ($data as $datum)
                                 <tr>
-                                    <td>{{ $datum->id }}</td>
+                                    <td>{{ $n++}}</td>
                                     <td>{{ $datum->name }}</td>
                                     <td>{{ $datum->category->name }}</td>
                                     <td>{{ $datum->brand->name }}</td>
                                     <td>{{ $datum->unit->id }}</td>
-                                    <th>{{ $datum->price->name }}</th>
+                                    <th>Rp.{{ $datum ? number_format($datum->price) : '-'}}</th>
                                     <th>{{ $datum->stock->id }}</th>
                                     <th>{{ $datum->image }}</th>
                                     <td>{{ $datum->action }}</td>
