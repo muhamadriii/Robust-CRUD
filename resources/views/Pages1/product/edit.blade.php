@@ -1,0 +1,71 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Create New</h3>
+                </div>
+                <form action="{{ route('product.store') }}" method="POST">
+                    @csrf
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Name :</label>
+                            <input type="text" name="name" class="form-control" placeholder="Enter Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Category :</label>
+                            <select class="from-control" name="category_id" id="">
+                                @foreach($categories as $category)
+                                    <option value="{{ $data->$category->id }}">
+                                        {{ $category->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Unit :</label>
+                            <select class="from-control" name="unit_id" id="">
+                                @foreach($units as $unit)
+                                    <option value="{{ $data->$unit->id }}">
+                                        {{ $unit->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Brand :</label>
+                            <select class="from-control" name="brand_id" id="">
+                                @foreach($brands as $brand)
+                                    <option value="{{ $data->$brand->id }}">
+                                        {{ $brand->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Price :</label>
+                            <input type="text" name="price" class="form-control" placeholder="Price">
+                        </div>
+                        <div class="form-group">
+                            <label>Stock :</label>
+                            <input type="text" name="stock" class="form-control" placeholder="Stock">
+                        </div>
+                        <div class="form-group">
+                            <label>image :</label>
+                            <input type="text" name="image" class="form-control" placeholder="Image">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+@endsection
