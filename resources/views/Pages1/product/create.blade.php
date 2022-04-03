@@ -55,10 +55,10 @@
                             <label>Stock :</label>
                             <input type="text" name="stock" class="form-control" placeholder="Stock">
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label>image :</label>
                             <input type="file" name="image" class="form-control" placeholder="Image">
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>

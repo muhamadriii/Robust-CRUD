@@ -17,7 +17,7 @@
                     <table class="table table-hover text-nowrap">
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th>no</th>
                                 <th>Name</th>
                                 <th>Category</th>
                                 <th>Brand</th>
@@ -40,7 +40,7 @@
                                     <td>{{ $datum->brand->name }}</td>
                                     <td>{{ $datum->unit->id }}</td>
                                     <th>Rp.{{ $datum ? number_format($datum->price) : '-'}}</th>
-                                    <th>{{ $datum->stock->id }}</th>
+                                    <th>{{ $datum->stock ? $datum->stock:'-'}}</th>
                                     <th>{{ $datum->image }}</th>
                                     <td>{{ $datum->action }}</td>
                                     <td>

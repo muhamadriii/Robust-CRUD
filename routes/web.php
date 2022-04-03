@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\UnitController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
@@ -38,6 +39,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('product', ProductController::class);
     Route::resource('brand', BrandController::class);
     Route::resource('unit', UnitController::class);
+    route::resource('order', OrderController::class);
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

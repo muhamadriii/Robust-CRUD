@@ -130,6 +130,21 @@
                                 </p>
                             </a>
                         </li>
+                        
+                    </ul>
+                </nav>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <li class="nav-item">
+                            <a href="{{ route('order.index') }}" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    order
+                                </p>
+                            </a>
+                        </li>
+                        
                     </ul>
                 </nav>
             </div>
@@ -169,6 +184,7 @@
     <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
+    @stack('js')
 </body>
 
 </html>
